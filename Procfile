@@ -1,1 +1,1 @@
-web: gunicorn nachatra.wsgi
+web: gunicorn some.wsgi
