@@ -1,0 +1,445 @@
+.elementor-10 .elementor-element.elementor-element-81c5d19:not(.elementor-motion-effects-element-type-background),
+.elementor-10 .elementor-element.elementor-element-81c5d19>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+	background-image: url("https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/subbanner-1.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.elementor-10 .elementor-element.elementor-element-81c5d19>.elementor-background-overlay {
+	background-color: transparent;
+	background-image: linear-gradient(80deg, #000000 21%, #F2295B00 75%);
+	opacity: 0.7;
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-81c5d19 {
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	padding: 8em 0em 8em 0em;
+}
+
+.elementor-10 .elementor-element.elementor-element-a8da2cc .elementor-heading-title,
+.elementor-10 .elementor-element.elementor-element-a8da2cc .hfe-page-title a {
+	font-family: "Jost", Sans-serif;
+	font-size: 40px;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+
+.elementor-10 .elementor-element.elementor-element-a8da2cc .hfe-page-title-icon i {
+	color: #FFFFFF;
+}
+
+.elementor-10 .elementor-element.elementor-element-a8da2cc .hfe-page-title-icon svg {
+	fill: #FFFFFF;
+}
+
+.elementor-10 .elementor-element.elementor-element-5b1c269 {
+	padding: 80px 0px 80px 0px;
+}
+
+.elementor-bc-flex-widget .elementor-10 .elementor-element.elementor-element-41b31bc.elementor-column .elementor-widget-wrap {
+	align-items: center;
+}
+
+.elementor-10 .elementor-element.elementor-element-41b31bc.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+	align-content: center;
+	align-items: center;
+}
+
+.elementor-bc-flex-widget .elementor-10 .elementor-element.elementor-element-6431702.elementor-column .elementor-widget-wrap {
+	align-items: center;
+}
+
+.elementor-10 .elementor-element.elementor-element-6431702.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+	align-content: center;
+	align-items: center;
+}
+
+.elementor-10 .elementor-element.elementor-element-7d86942 {
+	text-align: left;
+}
+
+.elementor-10 .elementor-element.elementor-element-7d86942 .elementor-heading-title {
+	color: #FFFFFF;
+	font-family: "Jost", Sans-serif;
+	font-size: 39px;
+	font-weight: 600;
+	line-height: 46px;
+}
+
+.elementor-10 .elementor-element.elementor-element-5c24d84 {
+	color: #FFFFFF;
+	font-family: "Jost", Sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+	padding-bottom: calc(6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+	margin-top: calc(6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+	margin-right: calc(6px/2);
+	margin-left: calc(6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-items.elementor-inline-items {
+	margin-right: calc(-6px/2);
+	margin-left: calc(-6px/2);
+}
+
+body.rtl .elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+	left: calc(-6px/2);
+}
+
+body:not(.rtl) .elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+	right: calc(-6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-icon i {
+	color: #FFFFFF;
+	transition: color 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-icon svg {
+	fill: #FFFFFF;
+	transition: fill 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee {
+	--e-icon-list-icon-size: 14px;
+	--e-icon-list-icon-align: left;
+	--e-icon-list-icon-margin: 0 calc(var(--e-icon-list-icon-size, 1em) * 0.25) 0 0;
+	--icon-vertical-offset: 0px;
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-item>.elementor-icon-list-text,
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-item>a {
+	font-family: "Jost", Sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.elementor-10 .elementor-element.elementor-element-efd20ee .elementor-icon-list-text {
+	color: #FFFFFF;
+	transition: color 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+	padding-bottom: calc(6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+	margin-top: calc(6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+	margin-right: calc(6px/2);
+	margin-left: calc(6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-items.elementor-inline-items {
+	margin-right: calc(-6px/2);
+	margin-left: calc(-6px/2);
+}
+
+body.rtl .elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+	left: calc(-6px/2);
+}
+
+body:not(.rtl) .elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+	right: calc(-6px/2);
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-icon i {
+	color: #FFFFFF;
+	transition: color 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-icon svg {
+	fill: #FFFFFF;
+	transition: fill 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 {
+	--e-icon-list-icon-size: 14px;
+	--e-icon-list-icon-align: left;
+	--e-icon-list-icon-margin: 0 calc(var(--e-icon-list-icon-size, 1em) * 0.25) 0 0;
+	--icon-vertical-offset: 0px;
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-item>.elementor-icon-list-text,
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-item>a {
+	font-family: "Jost", Sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.elementor-10 .elementor-element.elementor-element-70894c3 .elementor-icon-list-text {
+	color: #FFFFFF;
+	transition: color 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-9f3935c>.elementor-element-populated {
+	padding: 0px 0px 0px 70px;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e.elementor-view-stacked .elementor-icon {
+	background-color: #0E0E0E;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e.elementor-view-framed .elementor-icon,
+.elementor-10 .elementor-element.elementor-element-926ff1e.elementor-view-default .elementor-icon {
+	fill: #0E0E0E;
+	color: #0E0E0E;
+	border-color: #0E0E0E;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e {
+	--icon-box-icon-margin: 15px;
+	width: auto;
+	max-width: auto;
+	bottom: 57px;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e .elementor-icon {
+	font-size: 54px;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e .elementor-icon-box-wrapper {
+	text-align: left;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e .elementor-icon-box-title {
+	color: #080808;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e .elementor-icon-box-title,
+.elementor-10 .elementor-element.elementor-element-926ff1e .elementor-icon-box-title a {
+	font-family: "Jost", Sans-serif;
+	font-size: 45px;
+	font-weight: 600;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e .elementor-icon-box-description {
+	color: #080808;
+}
+
+.elementor-10 .elementor-element.elementor-element-926ff1e>.elementor-widget-container {
+	padding: 35px 22px 35px 22px;
+	background-color: #FBBC72DB;
+	border-style: solid;
+	border-width: 5px 5px 5px 5px;
+	border-color: #FFFFFF;
+}
+
+body:not(.rtl) .elementor-10 .elementor-element.elementor-element-926ff1e {
+	left: -46px;
+}
+
+body.rtl .elementor-10 .elementor-element.elementor-element-926ff1e {
+	right: -46px;
+}
+
+.elementor-10 .elementor-element.elementor-element-f671ad0:not(.elementor-motion-effects-element-type-background),
+.elementor-10 .elementor-element.elementor-element-f671ad0>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+	background-image: url("https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/05/bg-ab1.png");
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.elementor-10 .elementor-element.elementor-element-f671ad0>.elementor-background-overlay {
+	background-color: #000000;
+	opacity: 0.7;
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-f671ad0 {
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	padding: 6em 0em 8em 0em;
+}
+
+.elementor-10 .elementor-element.elementor-element-6b3f7d9>.elementor-element-populated {
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-6b3f7d9>.elementor-element-populated>.elementor-background-overlay {
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-63d2f9f {
+	padding: 0% 15% 0% 15%;
+}
+
+.elementor-10 .elementor-element.elementor-element-44242c9>.elementor-element-populated {
+	padding: 0px 0px 0px 0px;
+}
+
+.elementor-10 .elementor-element.elementor-element-669de3e {
+	text-align: center;
+}
+
+.elementor-10 .elementor-element.elementor-element-669de3e .elementor-heading-title {
+	color: #FFFFFF;
+	font-family: "Jost", Sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+	text-transform: capitalize;
+	line-height: 50px;
+}
+
+.elementor-10 .elementor-element.elementor-element-5e025dd {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: "Roboto", Sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.elementor-10 .elementor-element.elementor-element-5e025dd>.elementor-widget-container {
+	margin: -18px 0px 20px 0px;
+}
+
+.elementor-10 .elementor-element.elementor-element-bb652ea:not(.elementor-motion-effects-element-type-background),
+.elementor-10 .elementor-element.elementor-element-bb652ea>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+	background-image: url("https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/05/bg-ab.png");
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.elementor-10 .elementor-element.elementor-element-bb652ea>.elementor-background-overlay {
+	background-image: url("https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/bg-black.png");
+	background-size: cover;
+	opacity: 0;
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-bb652ea {
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	padding: 6em 0em 6em 0em;
+}
+
+.elementor-10 .elementor-element.elementor-element-7594ea7>.elementor-element-populated {
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-7594ea7>.elementor-element-populated>.elementor-background-overlay {
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-d6a5323 {
+	text-align: left;
+}
+
+.elementor-10 .elementor-element.elementor-element-b25a962>.elementor-element-populated {
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-b25a962>.elementor-element-populated>.elementor-background-overlay {
+	transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-10 .elementor-element.elementor-element-5b70519>.elementor-element-populated {
+	padding: 0px 0px 0px 0px;
+}
+
+.elementor-10 .elementor-element.elementor-element-510e105 .elementor-heading-title {
+	color: #FFFFFF;
+	font-family: "Jost", Sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+	text-transform: capitalize;
+	line-height: 50px;
+}
+
+@media(min-width:768px) {
+	.elementor-10 .elementor-element.elementor-element-7594ea7 {
+		width: 20.533%;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-b25a962 {
+		width: 79.467%;
+	}
+}
+
+@media(max-width:1024px) {
+	.elementor-10 .elementor-element.elementor-element-7d86942 .elementor-heading-title {
+		font-size: 34px;
+		line-height: 39px;
+	}
+
+	body:not(.rtl) .elementor-10 .elementor-element.elementor-element-926ff1e {
+		left: -69px;
+	}
+
+	body.rtl .elementor-10 .elementor-element.elementor-element-926ff1e {
+		right: -69px;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-926ff1e {
+		bottom: 0px;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-f671ad0>.elementor-background-overlay {
+		background-image: url("https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/bg-black.png");
+		opacity: 0;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-669de3e .elementor-heading-title {
+		font-size: 38px;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-510e105 .elementor-heading-title {
+		font-size: 38px;
+	}
+}
+
+@media(max-width:767px) {
+	body:not(.rtl) .elementor-10 .elementor-element.elementor-element-926ff1e {
+		left: -58px;
+	}
+
+	body.rtl .elementor-10 .elementor-element.elementor-element-926ff1e {
+		right: -58px;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-f671ad0>.elementor-background-overlay {
+		background-image: url("https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/bg-black.png");
+		opacity: 1;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-f671ad0 {
+		padding: 5em 0em 5em 0em;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-669de3e>.elementor-widget-container {
+		margin: 0px 0px 20px 0px;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-b5a8c54>.elementor-element-populated {
+		padding: 0px 15px 0px 15px;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-bb652ea>.elementor-background-overlay {
+		opacity: 1;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-bb652ea {
+		padding: 5em 0em 5em 0em;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-510e105>.elementor-widget-container {
+		margin: 0px 0px 20px 0px;
+	}
+
+	.elementor-10 .elementor-element.elementor-element-15ef4fd>.elementor-element-populated {
+		padding: 0px 15px 0px 15px;
+	}
+}

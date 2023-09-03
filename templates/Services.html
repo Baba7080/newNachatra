@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{%block headpart %}
+<link rel="stylesheet" href="{% static 'css/corocel.css' %}" >
+
+{% endblock headpart%}
+{% block title %}Services{% endblock title %}
+
+{% block post %}
+<style>
+
+    .sub-banner {
+        background-image: url('https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/subbanner-1.png');
+
+    }
+</style>
+<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-81c5d19 elementor-section-boxed elementor-section-height-default elementor-section-height-default sub-banner" data-id="81c5d19" data-element_type="section" data-settings='{"background_background":"classic"}'>
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-12f529a" data-id="12f529a" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-10bfb62 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="10bfb62" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9530875" data-id="9530875" data-element_type="column">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-a8da2cc elementor-widget elementor-widget-page-title" data-id="a8da2cc" data-element_type="widget" data-widget_type="page-title.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="hfe-page-title hfe-page-title-wrapper elementor-widget-heading">
+                                            <a href="https://andthemedia.com/astroprint-wordpress">
+                                                <h2 class="elementor-heading-title elementor-size-default">
+                                                    Our Services
+                                                </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-6f23f4c elementor-widget elementor-widget-html" data-id="6f23f4c" data-element_type="widget" data-widget_type="html.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="breadcrumb-link">
+                                            <a href="#">
+                                                Home
+                                            </a>
+                                            <span class="currentm">
+                                                Our Services
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9eaab27" data-id="9eaab27" data-element_type="column">
+                            <div class="elementor-widget-wrap"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock post %}

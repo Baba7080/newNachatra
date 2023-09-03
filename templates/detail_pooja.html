@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block post %}
+<style>
+
+    .sub-banner {
+        background-image: url('https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/subbanner-1.png');
+
+    }
+</style>
+<!--sub-Banner-start-->
+<section class="sub-banner subbanners mb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="min-title">
+                    <h1>Services</h1>
+                    <div class="breadcrumb-link">
+                        <a href="{% url 'home'%}">
+                            Home
+                        </a>
+                        <span class="currentm">
+                            Effect of planet Mars
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--sub-Banner-End-->
+<!-- Service -Start -->
+{% for detail in detailpooja %}
+<section class="pt-20 pb-20 ser-details text-white">
+    <div data-elementor-type="wp-post" data-elementor-id="1204" class="elementor elementor-1204">
+        <section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-3b250d5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3b250d5" data-element_type="section">
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8a17c70" data-id="8a17c70" data-element_type="column">
+                    <div class="elementor-widget-wrap elementor-element-populated">
+                        <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-d8f23ed elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d8f23ed" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-62e07e6" data-id="62e07e6" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-abb8382 elementor-widget elementor-widget-heading" data-id="abb8382" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <style>
+                                                    /*! elementor - v3.12.2 - 23-04-2023 */
+                                                    .elementor-heading-title {
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        line-height: 1
+                                                    }
+                                                    .elementor-widget-heading .elementor-heading-title[class*=elementor-size-] > a {
+                                                        color: inherit;
+                                                        font-size: inherit;
+                                                        line-height: inherit
+                                                    }
+                                                    .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                        font-size: 15px
+                                                    }
+                                                    .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                        font-size: 19px
+                                                    }
+                                                    .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                        font-size: 29px
+                                                    }
+                                                    .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                        font-size: 39px
+                                                    }
+                                                    .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                        font-size: 59px
+                                                    }
+                                                </style>
+                                                <h2 class="elementor-heading-title elementor-size-default">{{detail.benifit}}</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-246f5fd elementor-widget elementor-widget-text-editor" data-id="246f5fd" data-element_type="widget" data-widget_type="text-editor.default">
+                                            <div class="elementor-widget-container">
+                                                <style>
+                                                    /*! elementor - v3.12.2 - 23-04-2023 */
+                                                    .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                                                        background-color: #69727d;
+                                                        color: #fff
+                                                    }
+                                                    .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                                                        color: #69727d;
+                                                        border: 3px solid;
+                                                        background-color: transparent
+                                                    }
+                                                    .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                                                        margin-top: 8px
+                                                    }
+                                                    .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                                                        width: 1em;
+                                                        height: 1em
+                                                    }
+                                                    .elementor-widget-text-editor .elementor-drop-cap {
+                                                        float: left;
+                                                        text-align: center;
+                                                        line-height: 1;
+                                                        font-size: 50px
+                                                    }
+                                                    .elementor-widget-text-editor .elementor-drop-cap-letter {
+                                                        display: inline-block
+                                                    }
+                                                </style>
+                                                <p>{{detail.description}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-46d7159 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="46d7159" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4e8e105" data-id="4e8e105" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-349de07 elementor-widget elementor-widget-image" data-id="349de07" data-element_type="widget" data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                {% comment %} <img src="{{detail.image.url}}"> {% endcomment %}
+                                                {% comment %} <img decoding="async" width="1536" height="852" alt="" data-srcset="{{detail.image.url}} 1536w, {{detail.image.url}} 768w" data-src="{{detail.image.url}}" data-sizes="(max-width: 1536px) 100vw, 1536px" class="attachment-full size-full wp-image-1200 lazyload" src="{{detail.image.url}}"/><noscript><img decoding="async" width="1536" height="852" src="{{detail.image.url}}" class="attachment-full size-full wp-image-1200" alt="" srcset="{{detail.image.url}} 1536w, {{detail.image.url}} 300w,{{detail.image.url}} 768w" sizes="(max-width: 1536px) 100vw, 1536px"/></noscript> {% endcomment %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                            
+                            <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="{{detail.image.url}}">
+                              <img style="width: 300px; margin: auto;" class="rounded-4 fit" src="{{detail.image.url}}" />
+                            </a>
+                        </div>
+
+                        <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-2320f2b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2320f2b" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0aed5e3" data-id="0aed5e3" data-element_type="column">
+                                    
+                                </div>
+                            </div>
+                        </section>
+                        <a class='btn btn-primary mt-5' href="{% url 'bookpooja' pooja_id=detail.id %}" > Book Now</a>
+
+                        <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-7b07b43 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7b07b43" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d31f79f" data-id="d31f79f" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-3ac5652 elementor-widget elementor-widget-image" data-id="3ac5652" data-element_type="widget" data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <img decoding="async" width="350" height="498" alt="" data-srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2-211x300.png 211w" data-src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png" data-sizes="(max-width: 350px) 100vw, 350px" class="attachment-full size-full wp-image-1191 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/><noscript><img decoding="async" width="350" height="498" src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png" class="attachment-full size-full wp-image-1191" alt="" srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2-211x300.png 211w" sizes="(max-width: 350px) 100vw, 350px"/></noscript>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="has_eae_slider elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4bbb774" data-id="4bbb774" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-269a14a elementor-widget elementor-widget-image" data-id="269a14a" data-element_type="widget" data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <img decoding="async" width="350" height="498" alt="" data-srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2-211x300.png 211w" data-src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png" data-sizes="(max-width: 350px) 100vw, 350px" class="attachment-large size-large wp-image-1190 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/><noscript><img decoding="async" width="350" height="498" src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png" class="attachment-large size-large wp-image-1190" alt="" srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2-211x300.png 211w" sizes="(max-width: 350px) 100vw, 350px"/></noscript>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-57b46a7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="57b46a7" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4ddf5c7" data-id="4ddf5c7" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-9fd43f0 elementor-widget elementor-widget-heading" data-id="9fd43f0" data-element_type="widget" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth"</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-1700878 elementor-widget elementor-widget-text-editor" data-id="1700878" data-element_type="widget" data-widget_type="text-editor.default">
+                                            <div class="elementor-widget-container">
+                                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#8216;Content here, content here&#8217;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#8216;lorem ipsum&#8217; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#8217;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+{% endfor %}
+{% endblock post%}

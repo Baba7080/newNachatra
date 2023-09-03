@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{%block headpart %}
+<link rel="stylesheet" href="{% static 'css/corocel.css' %}" >
+
+{% endblock headpart%}
+{% block title %}Book Now{% endblock title %}
+
+{% block post %}
+<style>
+
+    .sub-banner {
+        background-image: url('https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/subbanner-1.png');
+
+    }
+</style>
+   <div class="container mt-5 sub-banner">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body p-5 justify-content">
+                        <h2 class="card-title text-center mb-4">Book Your Slot</h2>
+                        <form id="bookpooja" method="post">
+                            {% csrf_token %}
+                            {% for fm in form %}
+                            <div class="mb-3 text-dark">
+                                  <!-- crispy's label_tag adds the label with appropriate attributes -->
+                                {{ fm|as_crispy_field }}  <!-- crispy's as_crispy_field renders the form field with Bootstrap styles -->
+                                <small class="text-danger">{{ fm.errors | striptags }}</small>
+                            </div>
+                            {% endfor %}
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock post %}
+{%block some %}
+{% endblock some %}
