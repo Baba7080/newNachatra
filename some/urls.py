@@ -26,6 +26,7 @@ from astro.test import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",home,name="home"),
+    path('accounts/login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
     path('login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
     path('register/user/', user_registration, name='user_registration'),
     path('register/seller/', seller_registration, name='seller_registration'),

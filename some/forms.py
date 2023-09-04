@@ -10,21 +10,24 @@ from django.contrib.auth import password_validation
 from django.views.decorators.csrf import csrf_exempt
 
 
+
 class UserRegistrationForm(UserCreationForm):
     # Define user registration fields here (e.g., username, email, password)
-    Name = forms.CharField(label="Enter your Name" ,max_length=12)
+    first_name = forms.CharField(label="Enter your First Name" ,max_length=12)
+    last_name = forms.CharField(label="Enter your Last Name" ,max_length=12)
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class':"form-control"}))
     password2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput(attrs={'class':"form-control"}))
     email = forms.CharField(required=True, widget=forms.EmailInput(attrs={'class':"form-control"}))
     Role = forms.CharField(initial="User",widget=forms.TextInput(attrs={'readonly': 'readonly'}))
-    date_of_join = forms.DateField(initial=datetime.date.today)
-    # time_join = forms.DateTimeField(initial=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-    time_of_join = forms.TimeField(initial=datetime.datetime.now)
+    # date_of_join = forms.DateField(initial=datetime.date.today)
+    # # time_join = forms.DateTimeField(initial=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    # time_of_join = forms.TimeField(initial=datetime.datetime.now)
+    phone  = forms.IntegerField(required=True,help_text="Enter Your Contact details Number",widget=forms.TextInput(attrs={'class':"form-control",'type':'number'}))
     #  forms.DateTimeField(initial = datetime.datetime.now)
     # Category = forms.ChoiceField(choices = Catogories)
     class Meta:
         model = User
-        fields = ['Name','username','Role','date_of_join','time_of_join','email','password1','password2']
+        fields = ['first_name','last_name','username','Role','email','password1','password2','phone']
         label = {'email':'Email'}
         widget = {'username':forms.TextInput(attrs={'class':'form-control'})}
     def save(self, commit=True):

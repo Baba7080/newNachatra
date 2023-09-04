@@ -73,7 +73,7 @@
                                                         font-size: 59px
                                                     }
                                                 </style>
-                                                <h2 class="elementor-heading-title elementor-size-default">{{detail.benifit}}</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default m-4">{{detail.benifit}}</h2>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-246f5fd elementor-widget elementor-widget-text-editor" data-id="246f5fd" data-element_type="widget" data-widget_type="text-editor.default">
@@ -106,7 +106,7 @@
                                                         display: inline-block
                                                     }
                                                 </style>
-                                                <p>{{detail.description}}</p>
+                                                <p class="elementor-heading-title elementor-size-default m-4">{{detail.description}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -127,12 +127,12 @@
                                 </div>
                             </div>
                         </section>
-                        <div class="border rounded-4 mb-3 d-flex justify-content-center">
-                            
-                            <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="{{detail.image.url}}">
-                              <img style="width: 300px; margin: auto;" class="rounded-4 fit" src="{{detail.image.url}}" />
+                        <div class="border rounded-4 mb-3 d-flex justify-content-center align-items-center vh-100">
+                            <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="{{ detail.image.url }}">
+                                <img style="width: 300px;" class="rounded-4 fit" src="{{ detail.image.url }}" />
                             </a>
                         </div>
+                        
 
                         <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-2320f2b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2320f2b" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-default">
@@ -141,7 +141,7 @@
                                 </div>
                             </div>
                         </section>
-                        <a class='btn btn-primary mt-5' href="{% url 'bookpooja' pooja_id=detail.id %}" > Book Now</a>
+                        <a class='btn btn-lg btn-primary m-5 center' href="{% url 'bookpooja' pooja_id=detail.id %}" > Book Now</a>
 
                         <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-7b07b43 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7b07b43" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-default">
@@ -149,7 +149,7 @@
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-3ac5652 elementor-widget elementor-widget-image" data-id="3ac5652" data-element_type="widget" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
-                                                <img decoding="async" width="350" height="498" alt="" data-srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2-211x300.png 211w" data-src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png" data-sizes="(max-width: 350px) 100vw, 350px" class="attachment-full size-full wp-image-1191 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/><noscript><img decoding="async" width="350" height="498" src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png" class="attachment-full size-full wp-image-1191" alt="" srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2-211x300.png 211w" sizes="(max-width: 350px) 100vw, 350px"/></noscript>
+                                                <img decoding="async" width="350" height="498" alt="" data-srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9BGZx99T0zx3pS317ANF2nSbw8Xe9CDtuVw&usqp=CAU" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9BGZx99T0zx3pS317ANF2nSbw8Xe9CDtuVw&usqp=CAU" data-sizes="(max-width: 350px) 100vw, 350px" class="attachment-full size-full wp-image-1191 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/><noscript><img decoding="async" width="350" height="498" src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png" class="attachment-full size-full wp-image-1191" alt="" srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s5-2-211x300.png 211w" sizes="(max-width: 350px) 100vw, 350px"/></noscript>
                                             </div>
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-269a14a elementor-widget elementor-widget-image" data-id="269a14a" data-element_type="widget" data-widget_type="image.default">
                                             <div class="elementor-widget-container">
-                                                <img decoding="async" width="350" height="498" alt="" data-srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2-211x300.png 211w" data-src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png" data-sizes="(max-width: 350px) 100vw, 350px" class="attachment-large size-large wp-image-1190 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/><noscript><img decoding="async" width="350" height="498" src="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png" class="attachment-large size-large wp-image-1190" alt="" srcset="https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2.png 350w, https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/s4-2-211x300.png 211w" sizes="(max-width: 350px) 100vw, 350px"/></noscript>
+                                                <img decoding="async" width="350" height="498" alt="" data-srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1JHJgLYG3j3WvRf-xpf3XZvieFX0QoNyDnw&usqp=CAU" alt="" srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1JHJgLYG3j3WvRf-xpf3XZvieFX0QoNyDnw&usqp=CAU"/></noscript>
                                             </div>
                                         </div>
                                     </div>
@@ -171,13 +171,13 @@
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-9fd43f0 elementor-widget elementor-widget-heading" data-id="9fd43f0" data-element_type="widget" data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth"</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default">"The Timeless Tradition of Pooja: Nurturing the Soul"</h2>
                                             </div>
                                         </div>
                                         <div class="elementor-element elementor-element-1700878 elementor-widget elementor-widget-text-editor" data-id="1700878" data-element_type="widget" data-widget_type="text-editor.default">
                                             <div class="elementor-widget-container">
-                                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#8216;Content here, content here&#8217;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#8216;lorem ipsum&#8217; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#8217;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+                                                <p>Pooja, the sacred act of devotion, weaves itself seamlessly into the fabric of our lives, illuminating our path with its ethereal glow. It is the gentle reminder that amidst the chaos of existence, there lies a tranquil oasis of spiritual connection. With each prayer offered and incense lit, we cultivate a sanctuary of inner peace, a respite for our souls. Pooja is the bridge that links us to the divine, a timeless ritual that transcends generations. In its simplicity, we find solace, in its profundity, we discover purpose. Pooja isn't just a practice; it's the heartbeat of our spiritual journey, forever echoing in our hearts (Welcome to Nakshtravani).</p>
+                                                <p>Pooja, a sacred thread, weaves through life's tapestry, nurturing inner peace and spiritual connection. In its timeless embrace, we find purpose, humility, and a bridge to the divine, forever enriching our journey
                                                 </p>
                                             </div>
                                         </div>

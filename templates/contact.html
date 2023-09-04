@@ -65,7 +65,8 @@
 
     }
 </style>
-<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-acdca71 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="acdca71" data-element_type="section">
+{% comment %} <div class="sub-service"> {% endcomment %}
+<section class="has_eae_slider sub-service elementor-section elementor-top-section elementor-element elementor-element-acdca71 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="acdca71" data-element_type="section">
     <div class="elementor-container elementor-column-gap-default">
         <div class="has_eae_slider elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-535e460" data-id="535e460" data-element_type="column">
             <div class="elementor-widget-wrap elementor-element-populated">
@@ -122,7 +123,7 @@
                                                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                                                     <ul></ul>
                                                 </div>
-                                                <form id="contact" action="" method="post">
+                                                <form id="contact" class="mr-1" action="" method="post">
                                                     {% csrf_token %}
                                                     {% for fm in form %}
                                                         <div class="form-group mb-3">
@@ -205,12 +206,12 @@
                                             </div>
                                             <div class="elementor-icon-box-content">
                                                 <h4 class="elementor-icon-box-title">
-                                                    <span>
+                                                    <span text-white>
                                                         Address
                                                     </span>
                                                 </h4>
                                                 <p class="elementor-icon-box-description">
-                                                    vikalp Khand Gomtii nagar , Lucknow, Uttar Pradesh 226010
+                                                    1st Floor, 3/178, Vinamra Khand-5, Gomti Nagar, Lucknow, 226010
                                                 </p>
                                             </div>
                                         </div>
@@ -305,7 +306,8 @@
                                             }
                                         </style>
                                         <div class="elementor-custom-embed">
-                                            <iframe loading="lazy" title="4th floor, E-160, Sector 63 Rd, E Block, Sector 63, Noida, Uttar Pradesh 201301" aria-label="4th floor, E-160, Sector 63 Rd, E Block, Sector 63, Noida, Uttar Pradesh 201301" data-src="https://maps.google.com/maps?q=4th%20floor%2C%20E-160%2C%20Sector%2063%20Rd%2C%20E%20Block%2C%20Sector%2063%2C%20Noida%2C%20Uttar%20Pradesh%20201301&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe>
+                                            {% comment %} <iframe loading="lazy" title="4th floor, E-160, Sector 63 Rd, E Block, Sector 63, Noida, Uttar Pradesh 201301" aria-label="4th floor, E-160, Sector 63 Rd, E Block, Sector 63, Noida, Uttar Pradesh 201301" data-src="https://www.google.com/maps?q=26.8607,81.0023" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe> {% endcomment %}
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.2755469719655!2d81.02276127497142!3d26.86298526222665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2f36765ed41%3A0x68b21579a98a2449!2s5%2C%203-178%2C%20Chhota%20bharwara%2C%20Vinamra%20Khand%2C%20Gomti%20Nagar%2C%20Lucknow%2C%20Uttar%20Pradesh%20226010!5e0!3m2!1sen!2sin!4v1693862117179!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -317,6 +319,7 @@
         </div>
     </div>
 </section>
+{% comment %} </div> {% endcomment %}
 {% comment %} <style>
 
     .sub-service {

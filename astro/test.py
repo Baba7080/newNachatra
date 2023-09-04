@@ -7,6 +7,7 @@ from .forms import *
 from django.conf import settings
 import html
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 # Create your tests here.
 def detail_pooja(request, pooja_id):
     instance = Pooja.objects.filter(id=pooja_id)
@@ -71,7 +72,7 @@ def payment_view(id,amount):
     print(order)
     return order
     # return render('pay.html', {'order': order})
-
+@login_required
 def contactus(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -83,5 +84,11 @@ def contactus(request):
             return render(request,'contact.html',{'form':form})
             # Process the form data
     else:
-        form = ContactForm()
+        initial_data = {
+            'name': request.user.username,    # Assuming 'name' is a field in your User model
+            # 'number': request.user.number,  # Assuming 'number' is a field in your User model
+            'email': request.user.email,    # Assuming 'email' is a field in your User model
+        }
+        # form = MyForm(initial=initial_data)
+        form = ContactForm(initial=initial_data)
     return render(request,'contact.html',{'form': form})

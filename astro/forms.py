@@ -9,13 +9,19 @@ from django.utils.translation import gettext, gettext_lazy as _
 from django.contrib.auth import password_validation
 from django.views.decorators.csrf import csrf_exempt
 
+from django.core.exceptions import ValidationError
+
+def validate_10_digit_number(value):
+    if len(str(value)) != 10:
+        raise ValidationError('The number must be exactly 10 digits long.')
 
 class ContactForm(forms.ModelForm):
     # Define user registration fields here (e.g., username, email, password)
-    # Name = forms.CharField(label="Enter your Name")
+    name = forms.CharField(label="Enter your Name",widget=forms.TextInput(attrs={'class':"form-control"}))
     email = forms.CharField(required=True, widget=forms.EmailInput(attrs={'class':"form-control"}))
-    subject = forms.CharField(label="Enter the Topic ")
-    message = forms.CharField(label="Enter Message if any")
+    subject = forms.CharField(widget=forms.TextInput(attrs={'class':"form-control"}),label="Enter the Topic ")
+    message = forms.CharField(widget=forms.TextInput(attrs={'class':"form-control"}),label="Enter Message if any")
+    number = forms.IntegerField(label="Enter Your Contact ",validators=[validate_10_digit_number], widget=forms.TextInput(attrs={'class': 'form-control', 'type': 'number'}))
     class Meta:
         model = Contact
         # fields = ['Name','subject','message','email']

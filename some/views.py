@@ -15,7 +15,7 @@ def home(request):
     context = {'Horoscope': Horoscopes ,"profile":"2",'services':service}
     return render(request, 'home.html',context)
 def logout(request):
-    return render(request, 'login.html')
+    return redirect('login')
 def about(request):
     client = Services.objects.filter(is_approved=True)
     # print(client)
