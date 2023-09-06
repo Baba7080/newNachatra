@@ -17,6 +17,7 @@ def detail_pooja(request, pooja_id):
     # Original data-settings attribute value
 
     return render(request, 'detail_pooja.html', {'detailpooja': instance})
+@login_required
 def save_puja(request,pooja_id):
     if request.method == 'POST':
         form = PujaBook(request.POST)
