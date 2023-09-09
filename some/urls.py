@@ -37,7 +37,8 @@ urlpatterns = [
     path('logoutt/',logout,name='logoutt'),
     path('services/',Ourservices,name='services'),
     path('contactUs/',contactus,name='contactUs'),
-    path('accounts/profile/',home,name='home')
+    path('accounts/profile/',home,name='home'),
+    path('gallery',gallery,name='gallery')
 
 ]
 
