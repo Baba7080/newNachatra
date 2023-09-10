@@ -3,11 +3,17 @@ from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm, SellerRegistrationForm
 from astro .models import *
 from django.views.decorators.csrf import csrf_exempt
+from django.utils import timezone
 from django.contrib.auth import REDIRECT_FIELD_NAME, login as auth_login, logout as auth_logout
 @csrf_exempt
 def home(request):
     # astro_users = Profile.objects.filter(Role='Astro')
-    Horoscopes = Horoscope.objects.all()
+    today = timezone.now().date()
+
+    # # Filter data based on today's date
+    # filtered_data = YourModel.objects.filter(your_date_field__date=today)
+    Horoscopes = Horoscope.objects.filter(date=today)
+    # Horoscopes = Horoscope.objects.all()
     service = Pooja.objects.all()
     # print(Horoscopes)
     # for i in Horoscopes:
@@ -75,10 +81,39 @@ def seller_registration(request):
     return render(request, 'user_registration.html', {'form': form})
 
 def Ourservices(req):
-    return render(req,'Services.html')
+    service = Pooja.objects.all()
+    # print(Horoscopes)
+    # for i in Horoscopes:
+    #     print(i.image.url )
+    today = timezone.now().date()
+
+    # # Filter data based on today's date
+    # filtered_data = YourModel.objects.filter(your_date_field__date=today)
+    Horoscopes = Horoscope.objects.filter(date=today)
+    for i in Horoscopes:
+        print(i)
+    context = {'services':service,'Horoscope':Horoscopes}
+
+    return render(req,'Services.html',context)
 def gallery(req):
     images = Gallery.objects.all()
     print(images)
     for i in images:
         print(i.image)
     return render(req,'gallery.html',{'images':images})
+
+def allpooja(req):
+    poojas = Pooja.objects.all()
+    return render(req,'allpooja.html',{'pooja':poojas})
+
+def allhoros(req):
+    today = timezone.now().date()
+    Horoscopes = Horoscope.objects.filter(date=today)
+    # Horoscopes = Horoscope.objects.all()
+    print(Horoscopes)
+    return render(req,'horoscope.html',{'Horoscopess':Horoscopes})
+
+def detailhoroscope(req,horosid):
+    print(horosid)
+    Horoscopes = Horoscope.objects.filter(id=horosid)
+    return render(req,'detailhoroscope.html',{'Horoscope':Horoscopes})

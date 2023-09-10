@@ -58,4 +58,92 @@
         </div>
     </div>
 </section>
+
+<section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-a1160d5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a1160d5" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-e056f51" data-id="e056f51" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-7f9081a elementor-widget elementor-widget-shortcode" data-id="7f9081a" data-element_type="widget" data-widget_type="shortcode.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-shortcode">
+                            <h2 class="text-white m-5 bold">Book Your Pooja</h2>
+
+                            <div class="row">
+                                <div class="services-carousel  owl-carousel owl-theme">
+                                    {% for service in services %}
+                                    
+                                    <div class="item">
+                                        <div class="goals-box" style="background-image: url('{{service.image.url}}'); width: 200px;">
+                                            <span class="po-icon">
+                                                <a href="{% url 'detailpooja' pooja_id=service.id %}">
+                                                    <i class="icon icon-link"></i>
+                                                </a>
+                                            </span>
+                                            <div class="goals-cont">
+                                                <h3>
+                                                    <a href="{% url 'detailpooja' pooja_id=service.id %}">{{service.Name}}</a>
+                                                </a>
+                                                </h3>
+                                                <p>{{service.description}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                   
+                                </div>
+                            </div>
+                            <a class="btn btn-primary mt-5 btn-lg" href="{% url 'allpooja' %}">Veiw All</a>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-a1160d5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a1160d5" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-e056f51" data-id="e056f51" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-7f9081a elementor-widget elementor-widget-shortcode" data-id="7f9081a" data-element_type="widget" data-widget_type="shortcode.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-shortcode">
+                            <h2 class="text-white m-5 bold">Horoscope Forecasts</h2>
+                            <div class="row">
+                                <div class="services-carousel  owl-carousel owl-theme">
+                                    {% for Heroes in Horoscope %}
+                                    
+                                    <div class="item">
+                                        <div class="goals-box" style="background-image: url('{{Heroes.image.url}}'); width: 250px;">
+                                            <span class="po-icon">
+                                                <a href="{% url 'detailhoroscope' horosid=Heroes.id %}">
+                                                    <i class="icon icon-link"></i>
+                                                </a>
+                                            </span>
+                                            <div class="goals-cont">
+                                                <h3>
+                                                    <a href="{% url 'detailhoroscope' horosid=Heroes.id %}">{{Heroes.Name}}</a>
+                                                </a>
+                                                </h3>
+                                                <h5>{{Heroes.date}}</h5>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                   
+                                </div>
+                            </div>
+                            <a class="btn btn-primary mt-5 btn-lg" href="{% url 'horoscopes' %}">Veiw All</a>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock post %}

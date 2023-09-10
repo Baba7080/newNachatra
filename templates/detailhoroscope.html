@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block post %}
+<div class="container bg-white">
+    <div class="row mt-5">
+        {% for horos in Horoscope %}
+        <div class="col-4">
+            <img
+                decoding="async"
+                alt=""
+                data-src="{{ horos.image.url }}"
+                class="lazyload center"
+                src="{{ horos.image.url }}"
+            />
+        </div>
+        <div class="col-6">
+            <p> <h1 class="center">{{horos.Name}}</h1> </p>
+            <p> <h5>{{horos.description}}</h5> </p>
+            <p><h5>{{horos.date}}</h5></p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

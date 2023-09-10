@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block post %}
+<!-- Modal gallery -->
+<section class="">
+    <!-- Section: Images -->
+    
+    <section class="container">
+      <h3 class="text-center text-white m-5"> Today's Horoscopes</h3>
+      <div class="row">
+        {% for Heroes in Horoscopess %}
+        <div class="item m-5">
+            <div class="goals-box" style="background-image: url('{{Heroes.image.url}}'); width: 250px;">
+                <span class="po-icon">
+                    <a href="{% url 'detailhoroscope' horosid=Heroes.id  %}">
+                        <i class="icon icon-link"></i>
+                    </a>
+                </span>
+                <div class="goals-cont">
+                    <h3>
+                        <a href="{% url 'detailhoroscope' horosid=Heroes.id  %}">{{Heroes.Name}}</a>
+                    </a>
+                    </h3>
+                    <h5>{{Heroes.date}}</h5>
+                
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <!-- Section: Images -->
+  
+    <!-- Section: Modals -->
+    <section class="">
+      <!-- Modal 1 -->
+      <div
+        class="modal fade"
+        id="exampleModal1"
+        tabindex="-1"
+        aria-labelledby="exampleModal1Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/A3PDXmYoF5U"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
+  
+            <div class="text-center py-3">
+              <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal 2 -->
+      <div
+        class="modal fade"
+        id="exampleModal2"
+        tabindex="-1"
+        aria-labelledby="exampleModal2Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/wTcNtgA6gHs"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
+  
+            <div class="text-center py-3">
+              <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal 3 -->
+      <div
+        class="modal fade"
+        id="exampleModal3"
+        tabindex="-1"
+        aria-labelledby="exampleModal3Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/vlDzYIIOYmM"
+                title="YouTube video"
+                allowfullscreen
+              ></iframe>
+            </div>
+  
+            <div class="text-center py-3">
+              <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Modals -->
+  </section>
+  <!-- Modal gallery -->
+{% endblock post %}

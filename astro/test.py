@@ -74,7 +74,6 @@ def payment_view(id,amount):
     print(order)
     return order
     # return render('pay.html', {'order': order})
-@login_required
 def contactus(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

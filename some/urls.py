@@ -38,7 +38,10 @@ urlpatterns = [
     path('services/',Ourservices,name='services'),
     path('contactUs/',contactus,name='contactUs'),
     path('accounts/profile/',home,name='home'),
-    path('gallery',gallery,name='gallery')
+    path('gallery',gallery,name='gallery'),
+    path('allpooja/',allpooja,name='allpooja'),
+    path('horoscopes/',allhoros,name="horoscopes"),
+    path('detailhoroscope/<int:horosid>/',detailhoroscope,name='detailhoroscope')
 
 ]
 
