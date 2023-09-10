@@ -5,13 +5,15 @@ from astro .models import *
 from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
 from django.contrib.auth import REDIRECT_FIELD_NAME, login as auth_login, logout as auth_logout
+from django.utils import timezone
+import datetime
 @csrf_exempt
 def home(request):
     # astro_users = Profile.objects.filter(Role='Astro')
-    today = timezone.now().date()
 
-    # # Filter data based on today's date
-    # filtered_data = YourModel.objects.filter(your_date_field__date=today)
+    
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    # today = timezone.now().date()
     Horoscopes = Horoscope.objects.filter(date=today)
     # Horoscopes = Horoscope.objects.all()
     service = Pooja.objects.all()
@@ -85,7 +87,8 @@ def Ourservices(req):
     # print(Horoscopes)
     # for i in Horoscopes:
     #     print(i.image.url )
-    today = timezone.now().date()
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+
 
     # # Filter data based on today's date
     # filtered_data = YourModel.objects.filter(your_date_field__date=today)
@@ -107,7 +110,8 @@ def allpooja(req):
     return render(req,'allpooja.html',{'pooja':poojas})
 
 def allhoros(req):
-    today = timezone.now().date()
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+
     Horoscopes = Horoscope.objects.filter(date=today)
     # Horoscopes = Horoscope.objects.all()
     print(Horoscopes)
