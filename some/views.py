@@ -100,9 +100,6 @@ def Ourservices(req):
     return render(req,'Services.html',context)
 def gallery(req):
     images = Gallery.objects.all()
-    print(images)
-    for i in images:
-        print(i.image)
     return render(req,'gallery.html',{'images':images})
 
 def allpooja(req):

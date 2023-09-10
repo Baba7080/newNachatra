@@ -347,7 +347,7 @@
                                                                 </noscript>
                                                             </a>
                                                             
-                                                            <h3>{{ Horos.Name}}</h3>
+                                                            <a href="{% url 'detailhoroscope' horosid=Horos.id  %}"><h3>{{ Horos.Name}}</h3></a>
                                                             <h5>{{Horos.date}}</h5>
                                                         </div>
                                                     </div>
