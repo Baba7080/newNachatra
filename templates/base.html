@@ -42,6 +42,79 @@
         {% block linkcss %} {% endblock linkcss %}
 
     </head>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+          
+          <a class="navbar-brand" href="/"><img src="" height="40px" width="100px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Vendors
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
+                 <li><a class="dropdown-item" href="#">Mobile</a></li>
+                 <li><a class="dropdown-item" href="#">Laptop</a></li>
+               </ul>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="/">Venues</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="/">Gallery</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="/">Blogs</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="/">About Us</a>
+             </li>
+              
+              
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-warning" type="submit">S</button>
+            </form>
+            <div>
+             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           {% if request.user.is_authenticated %}
+              <li class="nav-item dropdown mx-2">
+                 <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   {{request.user.username|capfirst}}
+                 </a>
+                 <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                   <li><a class="dropdown-item" href="#">Profile</a></li>
+                   <li><a class="dropdown-item" href="#">Orders</a></li>
+                   <li><a class="dropdown-item" href="#">Change Password</a></li>
+                   <li><a class="dropdown-item" href="#">Logout</a></li>
+                 </ul>
+               </li>
+          
+               <li class="nav-item mx-2">
+                <a href="#" class="nav-link text-white"><span class="badge bg-danger"><i class="fas fa-shopping-cart"></i></span> Cart </a>
+               </li>
+           {% else %}
+               <li class="nav-item mx-2">
+                <a href="#" class="nav-link text-white">Login</a>
+               </li>
+               <li class="nav-item mx-2">
+                <a href="#" class="nav-link text-white">Registration</a>
+               </li>
+           {% endif %}
+             </ul>
+            </div>
+          </div>
+        </div>
+       </nav>
+
     <body class="home page-template page-template-elementor_header_footer page page-id-674 wp-embed-responsive ehf-header ehf-footer ehf-template-maintheme ehf-stylesheet-maintheme elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-674">
         <div id="page" class="hfeed site">
             <header id="masthead" itemscope="itemscope">
