@@ -49,7 +49,7 @@ class PujaForm(models.Model):
 
 class Horoscope(models.Model):
     Name = models.CharField(max_length=100)
-    description=models.CharField(max_length=100)
+    description=models.CharField(max_length=500)
     image = models.ImageField(default='deafault.jpeg', upload_to='poojatype')
     date =models.DateField()
     def __str__(self):
