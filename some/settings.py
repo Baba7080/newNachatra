@@ -27,7 +27,11 @@ SECRET_KEY = 'django-insecure-!l-d5q@6!3ciihew1f65ao@a*!7edigph(exn+-s+0em*f_832
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> b380869cc472ca12c52a1c2be305b6ed1b1e6318
 ALLOWED_HOSTS = ['*']
 
 
@@ -148,3 +152,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CORS_ALLOW_ALL_ORIGINS = True
 RAZORPAY_API_KEY = 'rzp_test_6bHn7PkDnJMYJx'
 RAZORPAY_API_SECRET = 'cNQkToeIj4BTKvwFtXlpRMWJ'
+CSRF_TRUSTED_ORIGINS = [
+    'https://nakchtra-108e306329f0.herokuapp.com',
+    'https://www.nakshtravani.com'
+]

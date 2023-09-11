@@ -7,7 +7,7 @@ from django.utils import timezone
 from django.contrib.auth import REDIRECT_FIELD_NAME, login as auth_login, logout as auth_logout
 from django.utils import timezone
 import datetime
-# @csrf_exempt
+@csrf_exempt
 def home(request):
     # astro_users = Profile.objects.filter(Role='Astro')
 
