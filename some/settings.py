@@ -148,3 +148,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CORS_ALLOW_ALL_ORIGINS = True
 RAZORPAY_API_KEY = 'rzp_test_6bHn7PkDnJMYJx'
 RAZORPAY_API_SECRET = 'cNQkToeIj4BTKvwFtXlpRMWJ'
+CSRF_TRUSTED_ORIGINS = [
+    'https://nakchtra-108e306329f0.herokuapp.com',
+    'https://www.nakshtravani.com'
+]
