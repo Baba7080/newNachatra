@@ -30,14 +30,14 @@ class UserRegistrationForm(UserCreationForm):
         fields = ['first_name','last_name','username','Role','email','password1','password2','phone']
         label = {'email':'Email'}
         widget = {'username':forms.TextInput(attrs={'class':'form-control'})}
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.passw = self.cleaned_data.get('password1')  # Copy the 'Name' field value to 'traffic'
+    # def save(self, commit=True):
+    #     user = super().save(commit=True)
+    #     user.passw = self.cleaned_data.get('password1')  # Copy the 'Name' field value to 'traffic'
         
-        if commit:
-            user.save()
+    #     if commit:
+    #         user.save()
         
-        return user
+    #     return user
 class SellerRegistrationForm(UserCreationForm):
     Name = forms.CharField(label="Enter your Name" ,max_length=12)
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class':"form-control"}))

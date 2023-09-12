@@ -127,11 +127,12 @@
                                 </div>
                             </div>
                         </section>
-                        <div class="border rounded-4 mb-3 d-flex justify-content-center align-items-center vh-100">
+                        <div class="container  mb-3 d-flex justify-content-center align-items-center vh-100 ml-5" style="">
                             <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="{{ detail.image.url }}">
                                 <img style="width: 300px;" class="rounded-4 fit" src="{{ detail.image.url }}" />
                             </a>
                         </div>
+
                         
 
                         <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-2320f2b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2320f2b" data-element_type="section">
@@ -141,7 +142,7 @@
                                 </div>
                             </div>
                         </section>
-                        <a class='btn btn-lg btn-primary m-5 center' href="{% url 'bookpooja' pooja_id=detail.id %}" > Book Now</a>
+                        <a class='btn btn-lg btn-primary m-5 container btn-lg' href="{% url 'bookpooja' pooja_id=detail.id %}" > Book Now</a>
 
                         <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-7b07b43 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7b07b43" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-default">
