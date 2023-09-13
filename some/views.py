@@ -48,7 +48,7 @@ def user_registration(request):
             # else:
             form.save()
             user = form.save(commit=False)
-            user.is_active = False
+            user.is_active = True
             print("1 active = flse")
             user.save()
             
