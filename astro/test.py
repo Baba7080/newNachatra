@@ -8,6 +8,7 @@ from django.conf import settings
 import html
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
 # Create your tests here.
 def detail_pooja(request, pooja_id):
     instance = Pooja.objects.filter(id=pooja_id)
@@ -69,9 +70,13 @@ def payment_view(id,amount):
         "payment_capture": 1,  # Unique order receipt
     }
     print(data)
-    order = client.order.create(data)
-    print(order)
-    return order
+    orderData = client.order.create(data)
+    TotalAmount =  orderData['amount']
+    dueAmount = orderData['amount_due']
+    print(TotalAmount,dueAmount)
+    createOrder = Order.objects.create(orderId=orderData['id'],amount=TotalAmount,amount_due=dueAmount,currency=orderData['currency'],status=orderData['status'],createdOntarget=orderData['created_at'])
+    print(orderData)
+    return orderData
     # return render('pay.html', {'order': order})
 def contactus(request):
     if request.method == 'POST':
