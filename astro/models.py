@@ -77,3 +77,15 @@ class Gallery(models.Model):
     name =models.CharField(max_length=100,blank=True)
     description = models.CharField(max_length=1000,blank=True)
     image = models.ImageField(default='deafault.jpeg', upload_to='gallery')
+
+class Order(models.Model):
+    orderId  = models.CharField(max_length=200,blank=False)
+    amount = models.IntegerField()
+    amount_due = models.IntegerField()
+    currency =  models.CharField(max_length=4)
+    status = models.CharField(blank=False,max_length=10)
+    createdOntarget = models.CharField(blank=True,max_length=130)
+    created = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.status
+    
