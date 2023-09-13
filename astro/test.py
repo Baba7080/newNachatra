@@ -9,7 +9,6 @@ import html
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # Create your tests here.
-@login_required
 def detail_pooja(request, pooja_id):
     instance = Pooja.objects.filter(id=pooja_id)
     # print(instance
