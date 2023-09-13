@@ -10,8 +10,6 @@ import datetime
 @csrf_exempt
 def home(request):
     # astro_users = Profile.objects.filter(Role='Astro')
-
-    
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     # today = timezone.now().date()
     Horoscopes = Horoscope.objects.filter(date=today)
@@ -73,7 +71,7 @@ def seller_registration(request):
         if form.is_valid():
             form.save()
             user = form.save(commit=False)
-            user.is_active = False
+            user.is_active = True
             print("1 active = flse")
             user.save()
             
