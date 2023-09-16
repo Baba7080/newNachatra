@@ -41,7 +41,9 @@ urlpatterns = [
     path('gallery',gallery,name='gallery'),
     path('allpooja/',allpooja,name='allpooja'),
     path('horoscopes/',allhoros,name="horoscopes"),
-    path('detailhoroscope/<int:horosid>/',detailhoroscope,name='detailhoroscope')
+    path('detailhoroscope/<int:horosid>/',detailhoroscope,name='detailhoroscope'),
+    # path('otp/<str:useer>',otpValidate,name='otp'),
+    path('otps/<int:useer>',otpValidates,name='otps'),
 
 ]
 
