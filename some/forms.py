@@ -14,11 +14,11 @@ from django.views.decorators.csrf import csrf_exempt
 class UserRegistrationForm(UserCreationForm):
     # Define user registration fields here (e.g., username, email, password)
     first_name = forms.CharField(label="Enter your First Name" ,max_length=12)
-    # last_name = forms.CharField(label="Enter your Last Name" ,max_length=12)
+    last_name = forms.CharField(label="Enter your Last Name" ,max_length=12)
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class':"form-control"}))
     password2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput(attrs={'class':"form-control"}))
-    # email = forms.CharField(required=True, widget=forms.EmailInput(attrs={'class':"form-control"}))
-    Role = forms.CharField(initial="User",widget=forms.HiddenInput())
+    email = forms.CharField(required=True, widget=forms.EmailInput(attrs={'class':"form-control"}))
+    Role = forms.CharField(initial="User",widget=forms.TextInput(attrs={'readonly': 'readonly'}))
     # date_of_join = forms.DateField(initial=datetime.date.today)
     # # time_join = forms.DateTimeField(initial=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     # time_of_join = forms.TimeField(initial=datetime.datetime.now)
@@ -27,8 +27,8 @@ class UserRegistrationForm(UserCreationForm):
     # Category = forms.ChoiceField(choices = Catogories)
     class Meta:
         model = User
-        fields = ['first_name','password1','password2','phone']
-        # label = {'email':'Email'}
+        fields = ['first_name','last_name','username','Role','email','password1','password2','phone']
+        label = {'email':'Email'}
         widget = {'username':forms.TextInput(attrs={'class':'form-control'})}
     def save(self, commit=True):
         user = super().save(commit=False)

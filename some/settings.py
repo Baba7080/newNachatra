@@ -152,7 +152,3 @@ CSRF_TRUSTED_ORIGINS = [
     'https://nakchtra-108e306329f0.herokuapp.com',
     'https://www.nakshtravani.com'
 ]
-AUTH_KEY = '405910TKleDs13v065046a5fP1'
-ACCOUNT_SID = "ACcc46a35823c5f59e6fc4b58963e51ffd"
-AUTH_TOKEN = "84b7472be0fc0b08081ac287598befae"
-VARIFY_SID = "VAd7d8eca65193bbd4179f77df7b0fa608"
