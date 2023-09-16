@@ -23,6 +23,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from astro.test import *
+from astro.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",home,name="home"),
@@ -43,6 +44,7 @@ urlpatterns = [
     path('horoscopes/',allhoros,name="horoscopes"),
     path('detailhoroscope/<int:horosid>/',detailhoroscope,name='detailhoroscope'),
     path('otps/<int:useer>',otpValidates,name='otps'),
+    path('loginphone',loginphone,name='loginphone')
 ]
 
 if settings.DEBUG:
