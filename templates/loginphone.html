@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block post %}
+<style>
+    .sub-banner {
+        background-image: url('https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/subbanner-1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 100px 0;
+    }
+
+    .form-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Custom CSS to style the button as a numeric input */
+    .numeric-input {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        padding: 0.375rem 0.75rem;
+        line-height: 1.5;
+        width: auto;
+        background-color: white; /* Optional: Add a background color */
+    }
+
+    /* Optional: Add more styles for focus and hover effects */
+    .numeric-input:focus, .numeric-input:hover {
+        background-color: #f8f9fa;
+        border-color: #adb5bd;
+    }
+</style>
+<div class="container sub-banner text-dark">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <div class="form-container">
+                <h3 class="text-center">Login with Phone Number</h3>
+                <hr>
+                <form action="" method="post" novalidate class="shadow p-5">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="phoneno">Enter Your Number</label>
+                        <input type="number" class="form-control numeric-input" name="phoneno" id="phoneno">
+                        <input type="submit" value="Submit" class="btn btn-primary mt-3">
+                    </div>
+                    <div class="text-center text-primary fw-bold">
+                        {% comment %} {% url 'password_reset' %} {% endcomment %}
+                        <small>Forgot Password ? <a href="#" class="text-danger">Forgot Password</a></small>
+                        <br>
+                        <small>New to Nakshtravani ? <a href="{% url 'user_registration' %}" class="text-danger">Register Now</a></small><br>
+                        <small>Login With Phone Number ? <a href="{% url 'loginphone' %}" class="text-danger">Login with Phone</a></small>
+                    </div>
+                    {% if form.non_field_errors %}
+                        {% for error in form.non_field_errors %}
+                            <p class="alert alert-danger my-3">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock post %}
