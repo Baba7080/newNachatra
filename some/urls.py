@@ -25,7 +25,7 @@ from django.contrib.auth import views as auth_views
 from astro.test import *
 from astro.views import *
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('authadmin/', admin.site.urls),
     path("",home,name="home"),
     path('accounts/login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
     path('login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
@@ -44,7 +44,9 @@ urlpatterns = [
     path('horoscopes/',allhoros,name="horoscopes"),
     path('detailhoroscope/<int:horosid>/',detailhoroscope,name='detailhoroscope'),
     path('otps/<int:useer>',otpValidates,name='otps'),
-    path('loginphone',loginphone,name='loginphone')
+    path('loginphone',loginphone,name='loginphone'),
+    path('profile/',profiles,name='profile'),
+    path('profileupdate/<int:pid>',profileupdate,name='profileupdate')
 ]
 
 if settings.DEBUG:

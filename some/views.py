@@ -15,6 +15,8 @@ from twilio.rest import Client
 from django.urls import reverse
 from twilio.base.exceptions import TwilioRestException
 from user.models import *
+from django.contrib.auth.decorators import login_required
+
 @csrf_exempt
 def home(request):
     # astro_users = Profile.objects.filter(Role='Astro')
@@ -153,7 +155,7 @@ def otpValidates(request, useer):
         try:
             verification_check = client.verify.v2.services(verify_sid) \
             .verification_checks \
-            .create(to=no, code=name)
+            .create(to=no, code=name,Body="Varification Code Nakshtravani")
             print(verification_check.status)
             if verification_check.status == 'approved':
                 print("valid otp")
@@ -229,3 +231,45 @@ def detailhoroscope(req,horosid):
     print(horosid)
     Horoscopes = Horoscope.objects.filter(id=horosid)
     return render(req,'detailhoroscope.html',{'Horoscope':Horoscopes})
+@login_required
+def profiles(req):
+    current_user = req.user
+    print(current_user)
+    current_profile = Profile.objects.filter(user=current_user)
+
+    if current_profile.exists():
+        for profile in current_profile:
+            print(profile.bio)
+        return render(req,'profile.html',{'profileData':current_profile})
+@login_required  
+def profileupdate(request,pid):
+    if request.method == 'POST':
+        print(pid)
+        my_object = Profile.objects.get(id=pid)
+        updateaddress = request.POST.get('address')
+        updatefirstname = request.POST.get('firstname')
+        updatelastname = request.POST.get('lastname')
+        updatemail = request.POST.get('mail')
+        updatePhoneNumber = request.POST.get('Phone_Number')
+        updatecity = request.POST.get('city')
+        updateaddress = request.POST.get('address')
+        # assiging the new valuee to object 
+        my_object.address = updateaddress
+        my_object.First_Name = updatefirstname
+        my_object.Second_Name = updatelastname
+        my_object.mail = updatemail
+        my_object.Phone_Number = updatePhoneNumber
+        my_object.city = updatecity
+        my_object.save()
+        current_profile = Profile.objects.filter(id=pid)
+
+        if current_profile.exists():
+            return render(request,'profile.html',{'profileData':current_profile})
+
+
+        print(request.POST.get('address'))
+    profileData = Profile.objects.filter(id=pid)
+    if profileData.exists():
+        for profile in profileData:
+            print(profile.bio)
+        return render(request,'updateprofile.html',{'profiledatas':profileData})
