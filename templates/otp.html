@@ -5,10 +5,6 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            background-color: #f8f9fa; /* Set a background color for the body */
-        }
-        
         /* Center the container horizontally and vertically */
         .center-container {
             display: flex;
@@ -16,7 +12,10 @@
             align-items: center;
             min-height: 100vh;
         }
-        
+        .bodyh {
+            justify-content: center;
+            align-items: center;
+        }
         /* Style for the container */
         .otp-container {
             background-color: #ffffff; /* Set a background color for the container */
@@ -36,9 +35,9 @@
         }
     </style>
 </head>
-<body>
-    <div class="container m-5 center-container">
-        <div class="otp-container">
+<body class="bg-white bodyh">
+    <div class="container m-5 center-container ml-5">
+        <div class="otp-container bg-dark ml-5">
             <h2 class="text-center text-primary">Please Validate OTP Here</h2>
             <form action="" method="post">
                 {% csrf_token %}

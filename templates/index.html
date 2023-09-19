@@ -252,6 +252,7 @@
                                                         {% for service in services %}
                                                         
                                                         <div class="item">
+                                                            <a href="{% url 'detailpooja' pooja_id=service.id %}">
                                                             <div class="goals-box" style="background-image: url('{{service.image.url}}'); width: 200px;">
                                                                 <span class="po-icon">
                                                                     <a href="{% url 'detailpooja' pooja_id=service.id %}">
@@ -266,6 +267,7 @@
                                                                     <p>{{service.description}}</p>
                                                                 </div>
                                                             </div>
+                                                        </a>
                                                         </div>
                                                         {% endfor %}
                                     

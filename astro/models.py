@@ -14,6 +14,8 @@ class Profile(models.Model):
     created = models.DateTimeField(auto_now=True)
     city = models.CharField(max_length=200,default='city')
     Phone_Number = models.CharField(max_length=10,null=True)
+    address = models.CharField(max_length=200,blank=True)
+    mail = models.EmailField(blank=True)
     Role = models.CharField(max_length=10,null=True)
     # Category = models.CharField(max_length=100, choices=Catogories , default='STUDENT')
     image = models.ImageField(default='deafault.jpeg', upload_to='profile_pics')

@@ -13,6 +13,12 @@ def loginphone(request):
             for pro in profiledata:
                 usernames = pro.user
                 passw = pro.bio
+            user = User.objects.filter(username=usernames)
+            print(user)
+            for users in user:
+                ids = users.id
+            return redirect('/otps/{}'.format(ids))
+            
             new_user = authenticate(username=usernames, password=passw)
             if new_user:
                 login(request, new_user)
