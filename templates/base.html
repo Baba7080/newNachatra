@@ -81,16 +81,17 @@
                             </li>
 
                             {% if request.user.is_authenticated %}
-                                <div class="dropdown m-2">
-                                    <li class="dropdown-toggle"  id="dropdownMenuButton profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {{ request.user.username|capfirst }}
-                                       
-                                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                                            <li><a class="dropdown-item" href="{% url 'profile' %}">My Account</a></li>
-                                            <li><a class="dropdown-item nav-link ml-3 ekit-menu-nav-link" href="{% url 'logout' %}">Logout</a></li>
-                                        </ul>
-                                    </li>
+                            <div class="dropdown m-2">
+                                <div class="dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ request.user.username|capfirst }}
                                 </div>
+                                <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                                    <li><a class="dropdown-item nav-link ekit-menu-nav-link" href="{% url 'profile' %}">My Account</a></li>
+                                    <li><a class="dropdown-item nav-link ml-3 ekit-menu-nav-link" href="{% url 'logout' %}">Logout</a></li>
+                                </ul>
+                            </div>
+                            
+                            
                                 
                             {% else %}
                                 <li id="menu-item-1082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1082 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
