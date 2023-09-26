@@ -153,8 +153,8 @@
         <div class="row align-items-center flex-row-reverse">
             <div class="col-lg-6">
                 <div class="about-text go-to">
-                    <h3 class="dark-color">{{ detail.benifit }}</h3>
-                    <h6 class="theme-color lead m-5"> Discover  &amp; the cosmos with us! At Nakshtravani.</h6>
+                    <h3 class="dark-color">{{ detail.Name }}</h3>
+                    <h6 class="theme-color lead m-5">{{detail.benifit}}</h6>
                     <p>{{ detail.description }}</p>
                     <a class="btn btn-primary btn-lg btn-block mt-5 mb-5" href="{% url 'bookpoojaqr' pooja_id=detail.id %}">Book Now</a>
 
@@ -184,9 +184,9 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="about-avatar">
-                    <img src="{{ detail.image.url }}" title="" alt="">
-                </div>
+                {% comment %} <div class="about-avatar"> {% endcomment %}
+                    <img src="{{ detail.image.url }}" title="" alt="" style="width: 100%; height: auto;">
+                {% comment %} </div> {% endcomment %}
             </div>
         </div>
         <div class="counter">
