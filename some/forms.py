@@ -82,3 +82,11 @@ class PujaBook(forms.ModelForm):
         fields = ['userName','mail','phoneNo','selectedDate','selectedTime']
     # def save(self, commit=True):
     #     user = super().save(commit=False)
+
+class PaymentVarification(forms.ModelForm):
+    Name = forms.CharField(label='Full Name', max_length=100)
+    transaction_id = forms.CharField(label='Transaction Id', max_length=150)
+    image = forms.ImageField(label="screenshot of the payment")
+    class Meta:
+        model = PaymentDetail
+        fields = ['Name','transaction_id','image']

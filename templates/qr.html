@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+<style>
+    .body {
+        background-color: aquamarine;
+    }
+</style>
+{% block post %}
+<div class="container">
+    <div class="center m-5 bg-white">
+        <div class="row">
+            <div class="col-6">
+                <img src="{% static 'assets/images/qr.jpeg' %}" style="width:500px;" alt="">
+                <p class="ml-2 block">Price : INR 999</p>
+                <p class="ml-2" style="color: red;">Note : Less Amount is not be Acceptable and will not be refunded</p>
+            </div>
+            <div class="col-6 mt-5">
+                <form action="" method="post" novalidate class="shadow p-5" enctype="multipart/form-data" >
+                    {% csrf_token %}
+                    {% for fm in form %}
+                    <div class="form-group mb-3">
+                        {{fm.label_tag}} {{fm}}<small class="text-danger">{{fm.errors | striptags}}</small>
+                    </div>
+                    {% endfor %}
+                    <input type="submit" value="Submit" class="btn btn-primary btn-lg bg-primary">
+                    {% comment %} <button class="btn btn-dark mt-5 btn-lg" type="submit" value="Upload"/> {% endcomment %}
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock post %}
