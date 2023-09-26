@@ -1,69 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
 <style>
-  body {
-    color: aquamarine;
-  }
-
-  .container {
-    max-width: 960px;
-  }
-
-  .center {
-    margin: 0 auto;
-  }
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .col-6 {
-    flex: 0 0 50%;
-    padding: 0 15px;
-  }
-
-  .mt-5 {
-    margin-top: 50px;
-  }
-
-  .shadow {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  }
-
-  .p-5 {
-    padding: 25px;
-  }
-
-  @media (max-width: 576px) {
-    .col-6 {
-      flex: 0 0 100%;
+    body {
+        color: aquamarine;
     }
-  }
+
+    /* Add custom styles for responsiveness */
+    @media (max-width: 768px) {
+        img {
+            width: 100%; /* Make the image responsive */
+        }
+
+        .col-6 {
+            text-align: center; /* Center align columns on small screens */
+        }
+
+        .ml-2.block {
+            margin-left: 0; /* Remove margin on small screens */
+            text-align: center; /* Center align text on small screens */
+        }
+    }
 </style>
 {% block post %}
 <div class="container">
-  <div class="center m-5 bg-white">
-    <div class="row">
-      <div class="col-6">
-        <img src="{% static 'assets/images/qr.jpeg' %}" style="width:100%;" alt="">
-        <p class="ml-2 block">Price : INR 999</p>
-        <p class="ml-2" style="color: red;">Note : Less Amount is not be Acceptable and will not be refunded</p>
-      </div>
-      <div class="col-6 mt-5">
-        <form action="" method="post" novalidate class="shadow p-5" enctype="multipart/form-data">
-          {% csrf_token %}
-          {% for fm in form %}
-          <div class="form-group mb-3">
-            {{fm.label_tag}} {{fm}}<small class="text-danger">{{fm.errors | striptags}}</small>
-          </div>
-          {% endfor %}
-          <input type="submit" value="Submit" class="btn btn-primary btn-lg bg-primary">
-          {% comment %} <button class="btn btn-dark mt-5 btn-lg" type="submit" value="Upload"/> {% endcomment %}
-        </form>
-      </div>
+    <div class="center m-5 bg-white">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <img src="{% static 'assets/images/qr.jpeg' %}" alt="" class="img-fluid">
+                <p class="ml-2 block">Price: INR 999</p>
+                <p class="ml-2" style="color: red;">Note: Less Amount is not be Acceptable and will not be refunded</p>
+            </div>
+            <div class="col-lg-6 col-md-12 mt-5">
+                <form action="" method="post" novalidate class="shadow p-5" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for fm in form %}
+                    <div class="form-group mb-3">
+                        {{fm.label_tag}} {{fm}}<small class="text-danger">{{fm.errors | striptags}}</small>
+                    </div>
+                    {% endfor %}
+                    <input type="submit" value="Submit" class="btn btn-primary btn-lg bg-primary">
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 {% endblock post %}
