@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block post %}
+<style>
+    .sub-banner {
+        background-image: url('https://andthemedia.com/astroprint-wordpress/wp-content/uploads/2023/03/subbanner-1.png');
+        background-size: cover;
+        background-position: center;
+        height: 300px; /* Adjust the height as needed */
+    }
+
+    .min-title {
+        padding: 20px;
+    }
+
+    .min-title h1 {
+        font-size: 36px;
+        color: #fff;
+    }
+
+    .breadcrumb-link a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .breadcrumb-link a:hover {
+        text-decoration: underline;
+    }
+
+    .ser-details {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+    }
+
+    .ser-details h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .ser-details p {
+        font-size: 18px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .btn-book-now {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-book-now:hover {
+        background-color: #0056b3;
+    }
+
+    .image-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+</style>
+
+<!-- Sub-Banner -->
+<section class="sub-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="min-title">
+                    <h1>Services</h1>
+                    <div class="breadcrumb-link">
+                        <a href="{% url 'home' %}">Home</a>
+                        <span class="currentm">Effect of planet Mars</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Sub-Banner -->
+
+<!-- Service Details -->
+{% for detail in detailpooja %}
+<section class="ser-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>{{ detail.benifit }}</h2>
+                <p>{{ detail.description }}</p>
+                <a class="btn-book-now m-5" href="{% url 'bookpooja' pooja_id=detail.id %}">Book Now</a>
+            </div>
+            <div class="col-md-6">
+                <div class="image-container">
+                    <a data-fslightbox="mygalley" target="_blank" data-type="image" href="{{ detail.image.url }}">
+                        <img src="{{ detail.image.url }}" alt="{{ detail.benifit }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+{% endblock post %}

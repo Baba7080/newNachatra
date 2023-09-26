@@ -155,7 +155,7 @@ def otpValidates(request, useer):
         try:
             verification_check = client.verify.v2.services(verify_sid) \
             .verification_checks \
-            .create(to=no, code=name,Body="Varification Code Nakshtravani")
+            .create(to=no, code=name )
             print(verification_check.status)
             if verification_check.status == 'approved':
                 print("valid otp")

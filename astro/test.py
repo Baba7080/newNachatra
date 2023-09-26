@@ -50,14 +50,14 @@ def save_puja(request,pooja_id):
                 }
             # # rr= booking.save()
             # Redirect or render a success page
-            return render(request, 'pay.html', {
+            return render(request, 'qr.html', {
                 'order': payment,
                 'detail':poojadetail
                 })
 
     else:
         form = PujaBook()
-    return render(request, 'payment.html', {'form': form})
+    return render(request, 'qr.html', {'form': form})
 
 def payment_view(id,amount):
     client = razorpay.Client(auth= (settings.RAZORPAY_API_KEY,settings.RAZORPAY_API_SECRET))
@@ -92,3 +92,15 @@ def contactus(request):
         # form = MyForm(initial=initial_data)
     form = ContactForm()
     return render(request,'contact.html',{'form': form})
+@login_required
+def save_payment(request,pooja_id):
+    if request.method == 'POST':
+        form = PaymentVarification(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            form = PaymentVarification()
+            messages.success(request, 'Form submitted successfully!')
+            # return redirect('success')
+            return render(request,'qr.html',{'form':form})
+    form = PaymentVarification()
+    return render(request, 'qr.html', {'form': form})

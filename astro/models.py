@@ -90,4 +90,12 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.status
+
+class PaymentDetail(models.Model):
+    name = models.CharField(max_length=100)
+    transaction_id = models.CharField(max_length=150)
+    image = models.ImageField(upload_to='payment')
+    datetime = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return f"{self.name} - {self.transaction_id} ({self.datetime.strftime('%Y-%m-%d %H:%M:%S')})"
     

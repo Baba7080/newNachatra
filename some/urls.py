@@ -44,9 +44,10 @@ urlpatterns = [
     path('horoscopes/',allhoros,name="horoscopes"),
     path('detailhoroscope/<int:horosid>/',detailhoroscope,name='detailhoroscope'),
     path('otps/<int:useer>',otpValidates,name='otps'),
-    path('loginphone',loginphone,name='loginphone'),
+    path('loginphone/',loginphone,name='loginphone'),
     path('profile/',profiles,name='profile'),
-    path('profileupdate/<int:pid>',profileupdate,name='profileupdate')
+    path('profileupdate/<int:pid>',profileupdate,name='profileupdate'),
+    path('bookpoojaqr/<int:pooja_id>/',save_payment,name='bookpoojaqr')
 ]
 
 if settings.DEBUG:
