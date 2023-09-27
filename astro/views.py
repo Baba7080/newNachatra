@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login
-
+from django.contrib.auth.models import User
+from some.forms import UserRegistrationForm, SellerRegistrationForm
 from .models import *
 # Create your views here.
 def loginphone(request):
@@ -26,5 +27,26 @@ def loginphone(request):
             else:
                 return redirect('user_registration')
         else:
-            return redirect('user_registration')
+            passs = number+"Nakshtravani@"
+            passs = str(passs)
+            print(passs)
+            user = User.objects.create(
+                username=number
+                # role='User',
+                # password=passs,
+            )
+            v = user.set_password(passs)
+            print(v)
+            user.save()
+            user = User.objects.get(username=number)
+            # user.is_active = False
+            user.passwo = passs
+
+            createProfile = Profile.objects.create(user=user,Phone_Number=number,Role='User',bio=passs)
+            user.save()
+            # print(createProfile)
+            # print(user.id)
+            # print(user)
+            # print("ghgjjhhgghgf")
+            return redirect('/otps/{}'.format(user.id))
     return render(request,'loginphone.html')
