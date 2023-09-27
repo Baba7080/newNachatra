@@ -16,7 +16,11 @@ from django.urls import reverse
 from twilio.base.exceptions import TwilioRestException
 from user.models import *
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
+def my_view(request, random_url):
+    # Do something with the random_url parameter
+    return HttpResponse(f"You entered the random URL: {random_url}")
 @csrf_exempt
 def home(request):
     # astro_users = Profile.objects.filter(Role='Astro')
