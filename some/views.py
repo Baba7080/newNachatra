@@ -159,7 +159,9 @@ def otpValidates(request, useer):
             print(verification_check.status)
             if verification_check.status == 'approved':
                 print("valid otp")
+                pro.is_active = True
                 new_user = authenticate(username=pro.username, password=passw)
+
                 if new_user:
                     login(request, new_user)
                     return redirect('home')
@@ -224,7 +226,7 @@ def allhoros(req):
 
     Horoscopes = Horoscope.objects.filter(date=today)
     # Horoscopes = Horoscope.objects.all()
-    print(Horoscopes)
+    # print(Horoscopes)
     return render(req,'horoscope.html',{'Horoscopess':Horoscopes})
 
 def detailhoroscope(req,horosid):
