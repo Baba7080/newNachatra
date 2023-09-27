@@ -44,9 +44,9 @@ def loginphone(request):
 
             createProfile = Profile.objects.create(user=user,Phone_Number=number,Role='User',bio=passs)
             user.save()
-            print(createProfile)
-            print(user.id)
-            print(user)
-            print("ghgjjhhgghgf")
+            # print(createProfile)
+            # print(user.id)
+            # print(user)
+            # print("ghgjjhhgghgf")
             return redirect('/otps/{}'.format(user.id))
     return render(request,'loginphone.html')
