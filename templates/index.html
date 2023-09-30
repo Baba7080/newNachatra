@@ -265,6 +265,9 @@
                                                                     </a>
                                                                     </h3>
                                                                     <p>{{service.description}}</p>
+                                                                    <div class="mt-1">
+                                                                        <a href="{% url 'detailpooja' pooja_id=service.id %}" class="btn btn-primary">Book Now</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -272,7 +275,9 @@
                                                         {% endfor %}
                                     
                                                     </div>
-                                                    <a class="btn btn-primary mt-5 btn-lg" href="{% url 'allpooja' %}">View All</a>
+                                                    <div class="mt-5">
+                                                        <a class="btn btn-primary mt-5 btn-lg"  href="{% url 'allpooja' %}">View All</a>
+                                                    </div>
                                     
                                                 </div>
                                                 

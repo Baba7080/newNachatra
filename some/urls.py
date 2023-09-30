@@ -27,7 +27,7 @@ from astro.views import *
 urlpatterns = [
     path('authadmin/', admin.site.urls),
     path("",home,name="home"),
-    path('accounts/login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
+    # path('accounts/login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
     path('login/',auth_views.LoginView.as_view(template_name='login.html',authentication_form=LoginForm),name='login'),
     path('register/user/', user_registration, name='user_registration'),
     path('register/seller/', seller_registration, name='seller_registration'),
@@ -43,12 +43,13 @@ urlpatterns = [
     path('allpooja/',allpooja,name='allpooja'),
     path('horoscopes/',allhoros,name="horoscopes"),
     path('detailhoroscope/<int:horosid>/',detailhoroscope,name='detailhoroscope'),
-    path('otps/<int:useer>',otpValidates,name='otps'),
+    path('otps/<int:useer>/',otpValidates,name='otps'),
     path('loginphone/',loginphone,name='loginphone'),
     path('profile/',profiles,name='profile'),
     path('profileupdate/<int:pid>',profileupdate,name='profileupdate'),
     path('bookpoojaqr/<int:pooja_id>/',save_payment,name='bookpoojaqr'),
     path('<str:random_url>/', my_view),
+    path('accounts/login/',loginphone,name='login')
 ]
 
 if settings.DEBUG:

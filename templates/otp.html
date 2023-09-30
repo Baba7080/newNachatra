@@ -43,6 +43,8 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <input type="number" class="form-control" name="otp" id="exampleInputPassword1" placeholder="Enter 4-digit OTP" required>
+                    <input type="hidden" name="next" value="{{next}}">
+                    
                 </div>
                 <div class="text-center">
                     <input type="submit" value="Submit" class="custom-btn">

@@ -115,6 +115,10 @@ def user_registration(request):
 
 def otpValidates(request, useer):
     pro = User.objects.get(id=useer)
+    next_url = request.GET.get('next', '')
+    print(next_url)
+    print("otp validate")
+
     print(pro.username)
     
     # You can simplify this query using get() if you expect only one profile per user
@@ -149,10 +153,15 @@ def otpValidates(request, useer):
         verification = client.verify.v2.services(verify_sid) \
             .verifications \
             .create(to=verified_number, channel="sms")
+        if next_url is not None:
+            return render(request, 'otp.html', {'username': useer,'next':next_url})
+
         return render(request, 'otp.html', {'username': useer})
 
     if request.method == 'POST':
         name = request.POST.get('otp')
+        next_url = request.POST.get('next')
+        print(next_url)
         print(name)
         print(type(name))
         
@@ -168,6 +177,8 @@ def otpValidates(request, useer):
 
                 if new_user:
                     login(request, new_user)
+                    if next_url:
+                        return redirect(next_url)
                     return redirect('home')
                 else:
                     return redirect('user_registration')
