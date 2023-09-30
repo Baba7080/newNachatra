@@ -5,8 +5,13 @@ from some.forms import UserRegistrationForm, SellerRegistrationForm
 from .models import *
 # Create your views here.
 def loginphone(request):
+    next_url = request.GET.get('next', '')
+    print(next_url)
     if request.method == 'POST':
         number = request.POST.get('phoneno')
+        nexturl = request.POST.get('next')
+        print(nexturl)
+        print("post loginphone")
         print(number)
         profiledata = Profile.objects.filter(Phone_Number=number)
         print(profiledata)
@@ -18,6 +23,8 @@ def loginphone(request):
             print(user)
             for users in user:
                 ids = users.id
+            if nexturl is not None:
+                return redirect(f'/otps/{ids}/?next={nexturl}')
             return redirect('/otps/{}'.format(ids))
             
             new_user = authenticate(username=usernames, password=passw)
@@ -49,4 +56,7 @@ def loginphone(request):
             # print(user)
             # print("ghgjjhhgghgf")
             return redirect('/otps/{}'.format(user.id))
-    return render(request,'loginphone.html')
+    if next_url is not None:
+        return render(request,'loginphone.html',{"next":next_url})
+    else:
+        return render(request,'loginphone.html')
