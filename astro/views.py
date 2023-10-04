@@ -60,3 +60,4 @@ def loginphone(request):
         return render(request,'loginphone.html',{"next":next_url})
     else:
         return render(request,'loginphone.html')
+    

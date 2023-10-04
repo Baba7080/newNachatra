@@ -99,3 +99,12 @@ class PaymentDetail(models.Model):
     def __str__(self):
         return f"{self.name} - {self.transaction_id} ({self.datetime.strftime('%Y-%m-%d %H:%M:%S')})"
     
+class PaymentInitiate(models.Model):
+    name = models.CharField(max_length=100)
+    amount = models.IntegerField()
+    source = models.CharField(max_length=150)
+    transaction_id = models.CharField(max_length=150)
+    status = models.CharField(max_length=500)
+    def __str__(self):
+        return self.name
+    
