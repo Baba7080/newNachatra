@@ -8,3 +8,6 @@ class Security(models.Model):
 
 
 
+class PaymentSecret(models.Model):
+    merchantid = models.CharField(max_length=200)
+    key = models.CharField(max_length=200)

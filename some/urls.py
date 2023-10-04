@@ -47,9 +47,10 @@ urlpatterns = [
     path('loginphone/',loginphone,name='loginphone'),
     path('profile/',profiles,name='profile'),
     path('profileupdate/<int:pid>',profileupdate,name='profileupdate'),
-    path('bookpoojaqr/<int:pooja_id>/',save_payment,name='bookpoojaqr'),
+    # path('bookpoojaqr/<int:pooja_id>/',save_payment,name='bookpoojaqr'),
+    path('accounts/login/',loginphone,name='login'),
+    path('paymentsuccess/',paymentsuccess,name='paymentsuccess'),
     path('<str:random_url>/', my_view),
-    path('accounts/login/',loginphone,name='login')
 ]
 
 if settings.DEBUG:
