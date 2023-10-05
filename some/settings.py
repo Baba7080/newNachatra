@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'user',
-    'corsheaders'
+    'corsheaders',
+    'storages',
     # 'corsheaders'
 ]
 
@@ -85,8 +86,12 @@ WSGI_APPLICATION = 'some.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'demo_1',
+        'USER': 'mydata',
+        'PASSWORD':'database',
+        'HOST': 'database-1.cj1zhn3bl9qo.ap-southeast-2.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -126,17 +131,17 @@ USE_TZ = True
 # ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL ='/media/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/"),
-]
+# MEDIA_URL ='/media/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/media/"),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -159,3 +164,21 @@ ACCOUNT_SID = "ACcc46a35823c5f59e6fc4b58963e51ffd"
 AUTH_TOKEN = "84b7472be0fc0b08081ac287598befae"
 VARIFY_SID = "VAd7d8eca65193bbd4179f77df7b0fa608"
 LOGIN_REDIRECT_URL = "loginphone/"
+
+# S3 Bucket
+
+AWS_ACCESS_KEY_ID = "AKIATUKOIRDACVWFMEDE"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "nakshatrabucket1"
+
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# Set static and media URLs
+STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/static/'
+MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/media/'
+
+AWS_LOCATION = 'static/'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
