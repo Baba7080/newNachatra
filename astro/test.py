@@ -66,7 +66,7 @@ def save_puja(request,pooja_id):
                     else:
                         userId = userss
                     print(prof.Phone_Number)
-                    baseurl = "https://www.nakshtravani.com"
+                    baseurl = "https://www.nakshtravani.com/"
                     data = {
                         "merchantId": merchant,
                         "merchantTransactionId": merchantTransactionId,
